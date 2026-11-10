@@ -15,7 +15,7 @@ export const profile = {
   links: {
     github: 'https://github.com/sankar-nagarajan-d365',
     // TODO: paste your LinkedIn profile URL here, e.g. 'https://www.linkedin.com/in/your-name/'
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/sankar-nagarajan-239390147/',
   },
 };
 
