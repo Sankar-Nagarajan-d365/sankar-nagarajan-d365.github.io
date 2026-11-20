@@ -270,6 +270,12 @@ export const appProject = {
     'Implemented application customizations and feature enhancements.',
     'Worked on application configuration, database connectivity, and deployment setup.',
   ],
+  stats: [
+    { value: '2', label: 'Platforms (iOS + Android)' },
+    { value: '₹0', label: 'Development & Publishing Cost' },
+    { value: '12', label: 'Development Phases' },
+    { value: '80+', label: 'Automated Security Tests' },
+  ],
   tech: ['Claude Code (AI-assisted Development)', 'Supabase', 'GitHub', 'Visual Studio Code', 'React Native'],
   features: [
     { icon: 'Lock', title: 'Encrypted chat', text: 'End-to-end encrypted messages, photos, voice notes and video.' },

@@ -43,6 +43,15 @@ export default function AppProject() {
         <h3 className="relative mt-5 font-display text-2xl font-bold text-white">{app.name}</h3>
         <p className="relative mt-2 text-sm leading-relaxed text-slate-400">{app.overview}</p>
 
+        <div className="relative mt-6 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+          {app.stats.map((st) => (
+            <div key={st.label} className="min-w-0 rounded-xl border border-white/10 bg-white/[0.03] p-4">
+              <p className="font-display text-3xl font-bold gradient-text">{st.value}</p>
+              <p className="mt-1 text-xs text-slate-400">{st.label}</p>
+            </div>
+          ))}
+        </div>
+
         <div className="relative mt-6">
           <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500">Key contributions</p>
           <ul className="mt-3 grid gap-2 md:grid-cols-2 md:gap-x-8">
