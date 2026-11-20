@@ -271,6 +271,23 @@ export const appProject = {
     'Worked on application configuration, database connectivity, and deployment setup.',
   ],
   tech: ['Claude Code (AI-assisted Development)', 'Supabase', 'GitHub', 'Visual Studio Code', 'React Native'],
+  features: [
+    { icon: 'Lock', title: 'Encrypted chat', text: 'End-to-end encrypted messages, photos, voice notes and video.' },
+    { icon: 'Phone', title: 'Voice & video calls', text: 'Peer-to-peer calls, with call history in the chat.' },
+    { icon: 'Tv', title: 'Watch Together', text: 'YouTube and uploaded videos, with play, pause and seek kept in sync.' },
+    { icon: 'Sparkles', title: 'Live pixel avatars', text: "Pixel characters showing the other user's live activity, with quick reactions." },
+    { icon: 'Heart', title: 'Memories & dates', text: 'Shared memories, special dates and countdowns.' },
+    { icon: 'Gamepad2', title: 'Play Together', text: 'Live two-player games such as Ludo, Tic Tac Toe and Pictionary.' },
+    { icon: 'ShieldCheck', title: 'App lock & backup', text: 'Biometric app lock and manual encrypted backups to Google Drive.' },
+    { icon: 'Smartphone', title: 'Widgets & themes', text: 'Android home-screen widget, push notifications, and time and weather themes.' },
+  ],
+  steps: [
+    { title: 'Plan', text: 'Split the idea into phases and tested each step before moving on.' },
+    { title: 'Backend', text: 'Set up Supabase for login, database, realtime updates and storage, with row-level security.' },
+    { title: 'Features', text: 'Built and customized the features one at a time, using Claude Code.' },
+    { title: 'Android build', text: 'Built the APK in the cloud with EAS Build.' },
+    { title: 'iPhone build', text: 'Built in the cloud and installed without a Mac or a paid developer account.' },
+  ],
 };
 
 export const navItems = [

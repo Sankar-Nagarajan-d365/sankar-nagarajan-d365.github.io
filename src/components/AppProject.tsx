@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Apple, Bot, CheckCircle2, Layers, Smartphone, User } from 'lucide-react';
 import { appProject as app } from '../data/profile';
-import { Section, SectionHeading } from './ui';
+import { Icon, Section, SectionHeading } from './ui';
 
 const tagIcon: Record<string, typeof Apple> = {
   iOS: Apple,
@@ -59,6 +59,47 @@ export default function AppProject() {
           {app.tech.map((t) => <span key={t} className="chip">{t}</span>)}
         </div>
       </motion.article>
+
+      {/* what the app does */}
+      <p className="mt-14 font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500">What the app does</p>
+      <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {app.features.map((f, i) => (
+          <motion.div
+            key={f.title}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.4, delay: (i % 4) * 0.06 }}
+            whileHover={{ y: -4 }}
+            className="glass group min-w-0 p-5"
+          >
+            <Icon name={f.icon} className="h-6 w-6 text-electric-400 transition-colors group-hover:text-violet-400" />
+            <h4 className="mt-4 font-display font-semibold text-white">{f.title}</h4>
+            <p className="mt-1 text-sm text-slate-400">{f.text}</p>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* how I built it */}
+      <p className="mt-14 font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500">How I built it</p>
+      <ol className="relative mt-6 space-y-6 border-l border-white/10 pl-8 sm:pl-10">
+        {app.steps.map((s, i) => (
+          <motion.li
+            key={s.title}
+            initial={{ opacity: 0, x: -16 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.4 }}
+            className="relative min-w-0"
+          >
+            <span className="absolute -left-[46px] top-0 flex h-7 w-7 items-center justify-center rounded-full bg-brand-gradient font-mono text-xs font-bold text-white sm:-left-[54px]">
+              {i + 1}
+            </span>
+            <h4 className="font-display font-semibold text-white">{s.title}</h4>
+            <p className="mt-1 text-sm text-slate-400">{s.text}</p>
+          </motion.li>
+        ))}
+      </ol>
     </Section>
   );
 }
