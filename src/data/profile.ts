@@ -288,11 +288,23 @@ export const appProject = {
     { icon: 'Smartphone', title: 'Widgets & themes', text: 'Android home-screen widget, push notifications, and time and weather themes.' },
   ],
   steps: [
-    { title: 'Plan', text: 'Split the idea into phases and tested each step before moving on.' },
-    { title: 'Backend', text: 'Set up Supabase for login, database, realtime updates and storage, with row-level security.' },
-    { title: 'Features', text: 'Built and customized the features one at a time, using Claude Code.' },
-    { title: 'Android build', text: 'Built the APK in the cloud with EAS Build.' },
-    { title: 'iPhone build', text: 'Built in the cloud and installed without a Mac or a paid developer account.' },
+    { title: 'Plan', text: 'Split the idea into 12 phases and tested each step before moving on.' },
+    { title: 'Set up', text: 'Installed Node.js, Git and Visual Studio Code on a Windows PC, and created the app with Expo (React Native + TypeScript).' },
+    { title: 'Code & repository', text: 'Wrote the code with Claude Code in VS Code, and kept it in a private GitHub repository.' },
+    { title: 'Test on phones', text: 'Tested every feature live on iPhone and Android with Expo Go before building the real apps.' },
+    { title: 'Backend', text: 'Supabase for login, database, realtime updates, file storage and server functions, protected with row-level security.' },
+    { title: 'Android build', text: 'Built the APK in the cloud with EAS Build (Expo), with Firebase handling push notifications.' },
+    { title: 'iPhone build', text: "Built the iOS app in the cloud with GitHub Actions. When GitHub's free Mac build machines kept being unavailable, I moved the iPhone builds to Codemagic." },
+    { title: 'Install on iPhone without a paid account', text: 'Installed with a free Apple ID through SideStore, set up from the PC with iLoader. LocalDevVPN and an iOS Shortcuts automation refresh the app every night.' },
+    { title: 'Backup & monitoring', text: 'Manual encrypted backups to Google Drive, and a crash-report system to find and fix bugs.' },
+  ],
+  tools: [
+    { group: 'Development', items: ['Claude Code', 'Visual Studio Code', 'Node.js', 'Git', 'TypeScript'] },
+    { group: 'App framework', items: ['React Native', 'Expo', 'Expo Router', 'Expo Go'] },
+    { group: 'Backend', items: ['Supabase (Auth, PostgreSQL, Realtime, Storage, Edge Functions)'] },
+    { group: 'Build & hosting', items: ['GitHub', 'GitHub Actions', 'EAS Build', 'Codemagic'] },
+    { group: 'iPhone install', items: ['SideStore', 'iLoader', 'LocalDevVPN', 'iOS Shortcuts'] },
+    { group: 'Services', items: ['Firebase Cloud Messaging', 'Google Drive API', 'WebRTC', 'Open-Meteo (weather)'] },
   ],
 };
 

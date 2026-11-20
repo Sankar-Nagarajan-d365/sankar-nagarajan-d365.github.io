@@ -109,6 +109,26 @@ export default function AppProject() {
           </motion.li>
         ))}
       </ol>
+
+      {/* tools I used */}
+      <p className="mt-14 font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500">Tools I used</p>
+      <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {app.tools.map((g, i) => (
+          <motion.div
+            key={g.group}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.4, delay: (i % 3) * 0.06 }}
+            className="glass min-w-0 p-5"
+          >
+            <h4 className="font-display font-semibold text-white">{g.group}</h4>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {g.items.map((t) => <span key={t} className="chip">{t}</span>)}
+            </div>
+          </motion.div>
+        ))}
+      </div>
     </Section>
   );
 }
