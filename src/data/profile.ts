@@ -38,12 +38,28 @@ export const certifications = [
     code: 'MB-500',
     title: 'Microsoft Dynamics 365: Finance and Operations Apps Developer',
     level: 'Associate',
+    issued: 'Issued Mar 2026 · Valid until Mar 2027',
+    credentialId: '7D25A172EFF7DF1E',
   },
   {
     code: 'MB-920',
     title: 'Microsoft Dynamics 365 Finance and Operations Apps (ERP)',
     level: 'Fundamentals',
+    issued: 'Issued May 2022',
   },
+];
+
+// Growth path shown under the certificate cards (oldest first).
+export const growthPath = [
+  { year: '2022', text: 'D365 Fundamentals' },
+  { year: '2025', text: 'Agile project management, Azure AI and Generative AI' },
+  { year: '2026', text: 'D365 F&O Developer Associate' },
+];
+
+export const professionalCerts = [
+  { title: 'Microsoft Azure AI Essentials', issuer: 'Microsoft', issued: 'Sep 2025', skills: ['Generative AI', 'Machine Learning'] },
+  { title: 'Career Essentials in Generative AI', issuer: 'Microsoft', issued: 'Sep 2025', skills: ['Responsible AI'] },
+  { title: 'Agile Project Management Professional Certificate', issuer: 'Atlassian', issued: 'Sep 2025', skills: ['Agile Project Management'] },
 ];
 
 export type Job = {

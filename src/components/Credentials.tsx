@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { Award, GraduationCap, RefreshCcw } from 'lucide-react';
-import { certifications, methodologies } from '../data/profile';
+import { Award, BadgeCheck, GraduationCap, RefreshCcw, TrendingUp } from 'lucide-react';
+import { certifications, growthPath, methodologies, professionalCerts } from '../data/profile';
 import { Section, SectionHeading } from './ui';
 
 function MicrosoftLogo() {
@@ -46,6 +46,10 @@ export default function Credentials() {
               <div className="relative mt-6">
                 <p className="font-mono text-sm text-electric-400">{c.code}</p>
                 <h3 className="mt-1.5 font-display text-xl font-bold leading-tight text-white sm:text-2xl">{c.title}</h3>
+                <p className="mt-2 text-xs text-white/60">{c.issued}</p>
+                {'credentialId' in c && c.credentialId && (
+                  <p className="mt-0.5 font-mono text-[11px] text-white/45">Credential ID {c.credentialId}</p>
+                )}
               </div>
               <div className="relative mt-6 border-t border-white/15 pt-4">
                 <p className="text-[11px] uppercase tracking-[0.18em] text-white/50">Awarded to</p>
@@ -99,6 +103,59 @@ export default function Credentials() {
             </ul>
           </motion.div>
         </div>
+      </div>
+
+      {/* growth path */}
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="glass mt-10 p-6 sm:p-7"
+      >
+        <div className="flex items-center gap-3">
+          <TrendingUp className="h-5 w-5 text-electric-400" aria-hidden="true" />
+          <p className="eyebrow">Growth path</p>
+        </div>
+        <ol className="mt-5 grid gap-4 md:grid-cols-3">
+          {growthPath.map((g, i) => (
+            <li key={g.year} className="relative flex min-w-0 items-start gap-3">
+              <span className="font-display text-2xl font-bold gradient-text">{g.year}</span>
+              <span className="mt-1.5 min-w-0 text-sm text-slate-300">{g.text}</span>
+              {i < growthPath.length - 1 && (
+                <span className="ml-auto mt-1.5 hidden text-slate-500 md:inline" aria-hidden="true">→</span>
+              )}
+            </li>
+          ))}
+        </ol>
+      </motion.div>
+
+      {/* professional certificates */}
+      <p className="mt-10 font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500">Professional certificates</p>
+      <div className="mt-4 grid gap-4 md:grid-cols-3">
+        {professionalCerts.map((p, i) => (
+          <motion.div
+            key={p.title}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: i * 0.08 }}
+            whileHover={{ y: -4 }}
+            className="glass flex min-w-0 flex-col p-5"
+          >
+            <div className="flex items-center gap-2.5">
+              {p.issuer === 'Microsoft'
+                ? <MicrosoftLogo />
+                : <BadgeCheck className="h-6 w-6 text-electric-400" aria-hidden="true" />}
+              <span className="text-sm font-semibold text-white/90">{p.issuer}</span>
+              <span className="ml-auto text-xs text-slate-500">{p.issued}</span>
+            </div>
+            <h3 className="mt-4 font-display font-semibold leading-snug text-white">{p.title}</h3>
+            <div className="mt-auto flex flex-wrap gap-2 pt-4">
+              {p.skills.map((sk) => <span key={sk} className="chip">{sk}</span>)}
+            </div>
+          </motion.div>
+        ))}
       </div>
     </Section>
   );
