@@ -253,11 +253,49 @@ export const learning = [
   { icon: 'Bot', name: 'AI-powered Business Automation', note: 'Applying AI to business processes' },
 ];
 
+// Personal project: a mobile app built with AI pair-programming.
+// Public page - keep out names, download/source links, server IDs and keys.
+export const appProject = {
+  name: 'Parallel Universe',
+  tagline: 'A private, end-to-end encrypted app for two people, on iPhone and Android.',
+  intro:
+    'I had no mobile development experience. I built this app step by step with an AI coding assistant (Claude Code): I set the goals, made the decisions and tested every step on real phones.',
+  stats: [
+    { value: '2', label: 'Platforms (iOS + Android)' },
+    { value: '₹0', label: 'Spent on build & publishing' },
+    { value: '12', label: 'Build phases' },
+    { value: '80+', label: 'Automated security tests' },
+  ],
+  features: [
+    { icon: 'Lock', title: 'Encrypted chat', text: 'End-to-end encrypted messages, photos, voice notes and video.' },
+    { icon: 'Phone', title: 'Voice & video calls', text: 'Peer-to-peer calls with WebRTC, with call history in the chat.' },
+    { icon: 'Tv', title: 'Watch Together', text: 'YouTube and uploaded videos with play, pause and seek kept in sync.' },
+    { icon: 'Sparkles', title: 'Live pixel avatars', text: "Pixel characters showing the partner's live activity, with quick reactions." },
+    { icon: 'Heart', title: 'Memories & dates', text: 'Shared memories, special dates and countdowns.' },
+    { icon: 'Gamepad2', title: 'Play Together', text: 'Live two-player games: Ludo, Colour Clash, Tic Tac Toe, Scribble, Pictionary.' },
+    { icon: 'ShieldCheck', title: 'App lock & backup', text: 'Biometric app lock and manual encrypted backups to Google Drive.' },
+    { icon: 'Smartphone', title: 'Widgets & themes', text: 'Android home-screen widget, push notifications, time and weather themes.' },
+  ],
+  steps: [
+    { title: 'Plan', text: 'Split the idea into 12 phases; each step was tested before moving on.' },
+    { title: 'Set up', text: 'Expo, React Native and TypeScript on a Windows PC.' },
+    { title: 'Design', text: 'Theme, tab navigation and the home screen with its pixel world.' },
+    { title: 'Backend', text: 'Supabase for login, Postgres database, realtime and storage, locked down with row-level security.' },
+    { title: 'Security', text: 'End-to-end encryption on the device, with automated security and encryption tests.' },
+    { title: 'Features', text: 'Chat, calls, Watch Together, memories, games and more, built one at a time.' },
+    { title: 'Android for free', text: 'APK built in the cloud with EAS Build and installed directly.' },
+    { title: 'iPhone without a Mac or $99', text: 'Built in the cloud (GitHub Actions / Codemagic) and installed with SideStore, which refreshes it automatically every night.' },
+    { title: 'Test & improve', text: 'Tested on both phones; a crash-report system helped find and fix bugs.' },
+  ],
+  tech: ['React Native', 'Expo', 'TypeScript', 'Supabase', 'PostgreSQL', 'WebRTC', 'E2E Encryption', 'EAS Build', 'GitHub Actions', 'Claude Code'],
+};
+
 export const navItems = [
   { id: 'about', label: 'About' },
   { id: 'experience', label: 'Experience' },
   { id: 'expertise', label: 'Expertise' },
   { id: 'projects', label: 'Projects' },
+  { id: 'app', label: 'App' },
   { id: 'credentials', label: 'Credentials' },
   { id: 'learning', label: 'Learning' },
   { id: 'contact', label: 'Contact' },

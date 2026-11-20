@@ -10,6 +10,7 @@ import Experience from './components/Experience';
 import Expertise from './components/Expertise';
 import Capabilities from './components/Capabilities';
 import Projects from './components/Projects';
+import AppProject from './components/AppProject';
 import Credentials from './components/Credentials';
 import Learning from './components/Learning';
 import Contact from './components/Contact';
@@ -41,6 +42,7 @@ export default function App() {
         <Expertise />
         <Capabilities />
         <Projects />
+        <AppProject />
         <Credentials />
         <Learning />
         <Contact />

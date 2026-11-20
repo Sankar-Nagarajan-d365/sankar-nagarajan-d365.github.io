@@ -1,13 +1,13 @@
 import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import {
-  AppWindow, BadgeCheck, BarChart3, Bot, Code2, GitBranch, Layers, LifeBuoy, Lightbulb,
-  Network, PieChart, ShieldCheck, Sparkles, Users, Workflow, Wrench, Zap, type LucideIcon,
+  AppWindow, BadgeCheck, BarChart3, Bot, Code2, Gamepad2, GitBranch, Heart, Layers, LifeBuoy, Lightbulb, Lock,
+  Network, Phone, PieChart, ShieldCheck, Smartphone, Sparkles, Tv, Users, Workflow, Wrench, Zap, type LucideIcon,
 } from 'lucide-react';
 
 export const icons: Record<string, LucideIcon> = {
-  AppWindow, BadgeCheck, BarChart3, Bot, Code2, GitBranch, Layers, LifeBuoy, Lightbulb,
-  Network, PieChart, ShieldCheck, Sparkles, Users, Workflow, Wrench, Zap,
+  AppWindow, BadgeCheck, BarChart3, Bot, Code2, Gamepad2, GitBranch, Heart, Layers, LifeBuoy, Lightbulb, Lock,
+  Network, Phone, PieChart, ShieldCheck, Smartphone, Sparkles, Tv, Users, Workflow, Wrench, Zap,
 };
 
 export function Icon({ name, className }: { name: string; className?: string }) {
